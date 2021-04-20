@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+  <title>jsonp</title>
+</head>
+<body>
+  <div>jsonp</div>
+
+  
+  <script>
+    function getData(data){
+      console.log("11",JSON.stringify(data))
+    }
+
+  </script>
+  <script src="./data.js?callback = getData" ></script>
+</body>
+
+</html>

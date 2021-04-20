@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id = 'btn'>我是按钮</button>
+    <script>
+       /*  function sum (x, y){
+            return x + y;
+        }
+        const sum2 = function (x, y){
+            return x + y;
+        } 
+        const res = sum(2, 3);
+        console.log(res)
+
+        const res2 = sum2(4, 5);
+        console.log(res2) */
+
+        /* 箭头函数 ，箭头左边是变量，右边是方法体 
+        const sum3 = (x, y) => {
+            return x + y;
+        }
+        //方法只有一行代码时可以简化成如下：
+        const sum4 = (x, y) =>  x + y;
+        
+        const fn = x => {
+            //业务逻辑代码
+        }
+        console.log(sum4(3,5)) */
+
+        // const oBtn = document.querySelector('#btn');
+        // oBtn.addEventListener('click', () => {
+        //    /*  this表示当前对象（oBtn）引用,但是在箭头函数里没有this，
+        //     在使用箭头函数里的this会通过当前作用域链去找上层作用域内找this */
+        //     console.log(this === window);
+        //     this.style.backgroundColor = '#f00';
+        // });
+        // console.log(oBtn);
+
+        /*  const obj = {
+            name1: 'xiecheng',
+            showName: function(){
+                console.log('我的名字是：' + this.name1);
+            },
+            showName1: () => {
+                console.log('我的名字是：' + this.name1);
+            },
+            showName2 () { //ES6对象简写
+                console.log('我的名字是：' + this.name1);
+            }
+        }
+
+        obj.showName();
+        obj.showName1();
+        obj.showName2(); */
+
+        // function sum2 (x, y) {
+        //     console.log(arguments)
+        // }
+        // sum2(2,4);
+
+        // const sum3 =  (x, y) => {
+        //     console.log(arguments)
+        //     return 3 + 4;
+        // }
+        // sum3(2,4);
+
+        function Course(name, price){
+            this.name = name;
+            this.price = price;
+        }
+        /* const Course1 = (name, price) => {
+            this.name = name;
+            this.price = price;
+        }
+        const c1 = new Course1('es',500);
+        console.log(c1) */
+
+        Course.prototype.study = () => {
+            console.log(`我要学习${this.name},价格是：${this.price}`)
+        }
+        const c1 = new Course('es', 500);
+        c1.study()
+    </script>    
+</body>
+</html>

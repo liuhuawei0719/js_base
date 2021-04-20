@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1, user-scale=no">
+</head>
+<body>
+<div id="app">
+  {{name}}
+</div>
+<!-- <script type = "module">
+  import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js'
+  new Vue({
+    el: '#app',
+    data: {
+      name: 'vue'
+    }
+  })
+</script> -->
+
+<script type="importmap">
+    {
+      "imports":{
+        "vue":"https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js"
+      }
+    }
+  </script>
+<script type="module" src="/index.js"></script>
+
+
+</body>
+</html>
+

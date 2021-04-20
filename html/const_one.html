@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var ex = 'es6';
+        // es = 'es2015';
+        // console.log(es+ex);
+
+      /* es3  
+       Object.defineProperties(window,'es',{
+            value: 'es6',
+            writable: false
+        })
+        console.log(es);
+        es = 'es2015';
+        console.log(es); */
+
+       /*  const es = 'es6';
+        console.log(es); */
+
+       /*  const exObj = {
+            name: 'es6',
+            year: 2015
+        };
+        Object.freeze(exObj);
+        exObj.name = 'es215';
+        console.log(exObj)
+
+        const arr = ['es6','es7','es8'];
+        arr[0] = 'es2015';
+        console.log(arr); */
+
+        /* let VS const 
+            const 修饰的值不能被改变
+            let 修饰可能会改变的常量值
+        */
+
+        const exObj = {
+            name: 'es6',
+            year: 2015,
+            extension: ['es6','es7','es8']
+        };
+        myFress(exObj);
+        exObj.extension[0] = 'es215';
+        console.log(exObj)
+
+        function myFress(obj){
+            Object.freeze(obj);
+            Object.keys(obj).forEach(function(key){
+                if(typeof obj[key] === 'object'){
+                    myFress(obj[key]);
+                }
+            })
+        }
+
+    </script>
+</body>
+</html>

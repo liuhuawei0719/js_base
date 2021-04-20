@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Title</title>
+  <style>
+   .wrapper{
+      height: 200px;
+    }
+    /* div{
+      height: 200px;
+    } */
+    .left{
+      position: absolute;
+      width: 200px;
+      background: #bfa; 
+    
+    }
+    .right{
+      position: absolute;
+      width: 200px;
+      background: #baf;
+      right:0;
+    }
+    .center{
+      width: 100%;
+      background: #bdf;
+      padding: 0 200px;
+      box-sizing: border-box;
+    }
+    .father{
+      border: 5px solid rebeccapurple;
+      overflow: hidden;
+    }
+    .child{
+      border: 5px solid red;
+      height: 100px;
+      width: 200px;
+      float: left;
+    }
+  </style>
+</head>
+  <body>
+     
+    <div class="wrapper">
+      <div class="left">左</div>
+      <div class="right">右</div>
+      <div class="center">中</div>
+    </div>
+    <div class="father">
+      <div class="child"></div>
+    </div>
+   
+  </body>
+
+</html>

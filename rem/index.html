@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+        maximun-scale=1, user-scalable=no">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 0.5rem;
+    }
+    input::-webkit-input-placeholder{
+      color: red
+    }
+    input:focus {
+      background-color: blue;
+    }
+    input {
+      border: none;
+      outline: nonel
+    }
+    /* 单行超出省略号 */
+    .demo1{
+      font-size: .3rem;
+      width: 400px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: break-all;
+      border: 1px solid green; 
+    }
+    /* 多行超出省略号 */
+    .demo2{
+      font-size: .3rem;
+      width: 400px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4; 
+      line-clamp: 4;
+      word-break: break-all;
+      overflow: hidden;
+      border: 1px solid green;
+    }
+    .scroll-container{
+      font-size: .3rem;
+      width: 400px;
+      height: 100px;
+      overflow: auto;
+      border: 1px solid green;
+    }
+    .scroll-container::-webkit-scrollbar {
+      width: 8px;
+      background: white;
+    }
+    .scroll-container::-webkit-scrollbar-corner,
+      /* 滚动条角落 */
+    .scroll-container::-webkit-scrollbar-thumb,
+    .scroll-container::-webkit-scrollbar-track {      /*滚动条的轨道*/
+      border-radius: 4px;
+    }
+    .scroll-container::-webkit-scrollbar-corner,
+    .scroll-container::-webkit-scrollbar-track {
+      /* 滚动条轨道 */
+      background-color: rgba(180, 160, 120, 0.1);
+      box-shadow: inset 0 0 1px rgba(180, 160, 120, 0.5);
+    }
+    .scroll-container::-webkit-scrollbar-thumb {
+      /* 滚动条手柄 */
+      background-color: #00adb5;
+    }
+    .wrap{
+      margin-left: -6px; 
+    }
+    .imgWrapper {
+      height: 200px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .item{
+      float: left;
+      width: 20%;
+      height: 300px;
+    }
+    .img{
+      float: left;
+    }
+    ul{
+      margin-top: 10px;
+      list-style: none;
+      padding:0;
+      border:1px solid red;
+      text-align: center;
+    }
+    li {
+      padding: 10px;
+      outline-offset: -10px;
+    }
+    li+li{
+      border-top:1px solid red;
+    }
+    .trangle{
+      width: 0;
+      height: 0;
+      margin-bottom: 20px;
+      margin-left: 20px;
+      border-style: solid;
+      border-width: 30px 15px 30px 15px;
+      border-color: transparent transparent red transparent; 
+    }
+  </style>
+</head>
+<body>
+<p>123456</p>
+<input placeholder="2323"></input>
+<div class="demo scroll-container">
+    <span class="text">今年6月将年满90岁的劳尔·卡斯特罗于2011年古共六大上接替菲德尔·卡斯特罗，出任古共中央委员会第一书记，并于2016年召开古共七大时再次当选该职务。
+        劳尔·卡斯特罗担任党内最高领导职务以来，古巴推行了一系列新政策推动古巴各项改革特别是经济社会模式更新，在政治、经济、
+    </span>
+</div>
+<div class="wrap">
+    <div class="item" style="background-color: red;"></div>
+    <div class="item" style="background-color: green;"></div>
+    <div class="item" style="background-color: yellow;"></div>
+    <div class="item" style="background-color: pink;"></div>
+    <div class="item" style="background-color: green;"></div>
+</div>
+<div class="imgWrapper">
+  <img class="img" src="./1.jpg"  width="100px" height="75px"/>
+  <img class="img" src="./1.jpg"  width="100px" height="75px"/>
+  <img class="img" src="./1.jpg"  width="100px" height="75px"/>
+  <img class="img" src="./1.jpg"  width="100px" height="75px"/>
+  <img class="img" src="./1.jpg"  width="100px" height="75px"/>
+  <img class="img" src="./1.jpg"  width="100px" height="75px"/>
+  <div></div>
+</div>
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+</ul>
+
+<div class="trangle">
+
+</div>
+<script>
+  function init(){
+    var width = document.documentElement.clientWidth
+    document.documentElement.style.fontSize = width / 10 + 'px'
+  }
+
+  init();
+  window.addEventListener('orientationchange',init)
+  window.addEventListener('resize', init)
+  
+</script>
+</body>
+</html>
+

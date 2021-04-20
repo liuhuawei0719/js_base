@@ -1,0 +1,3 @@
+window.getData({
+  name: 'aaa'
+})
